@@ -1,0 +1,1844 @@
+/*
+  AfroQueen Beauty Supply - Soft Divine Seduction
+  -------------------------------------------------------------------------
+  Luxury Afro-Caribbean wellness brand aesthetic.
+  Soft, elegant, feminine luxury with warm Caribbean sophistication.
+  Panama Black-Owned Business - Queen Wellness Positioning
+*/
+
+:root {
+  /* Luxury Gold & Warm Tones */
+  --gold: #d4af37; /* Rich luxury gold */
+  --gold-light: #e8d4a0; /* Soft champagne gold */
+  --rose-gold: #e4c3ad; /* Warm rose gold accent */
+
+  /* Soft Neutrals */
+  --cream: #fef8f0; /* Soft cream background */
+  --warm-white: #fffdf7; /* Warm white */
+  --soft-brown: #8b7355; /* Soft elegant brown */
+  --deep-brown: #3e2723; /* Deep rich chocolate */
+
+  /* Accent Colors */
+  --caribbean-teal: #7eb8b3; /* Soft tropical teal */
+  --blush: #f4e4dc; /* Soft blush pink */
+
+  /* Text Colors */
+  --text-dark: #3e2723; /* Deep elegant brown */
+  --text-medium: #6d5d52; /* Medium warm brown */
+  --text-light: #ffffff; /* Pure white */
+
+  /* Primary Brand Colors */
+  --primary: var(--gold);
+  --secondary: var(--rose-gold);
+  --accent: var(--caribbean-teal);
+  --light: var(--cream);
+  --dark: var(--deep-brown);
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-dark);
+  background-color: var(--warm-white);
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+/* Luxury Typography */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: var(--deep-brown);
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Announcement bar */
+.top-bar {
+  background: linear-gradient(
+    135deg,
+    var(--deep-brown) 0%,
+    var(--soft-brown) 100%
+  );
+  color: var(--gold-light);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Navigation */
+.nav {
+  background: rgba(255, 253, 247, 0.98);
+  backdrop-filter: blur(10px);
+  color: var(--text-dark);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s ease;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  transition: padding 0.3s ease;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  color: var(--deep-brown);
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.logo:hover {
+  color: var(--gold);
+}
+
+.logo .highlight {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.menu a {
+  color: var(--text-medium);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu a:hover {
+  color: var(--gold);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.actions a {
+  margin-left: 1.5rem;
+  color: var(--text-medium);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+}
+
+.actions a:hover {
+  color: var(--gold);
+  transform: translateY(-1px);
+}
+
+/* Hero section - Soft Divine Seduction */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--blush) 0%,
+    var(--cream) 50%,
+    var(--warm-white) 100%
+  );
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: brightness(1.05) contrast(0.95);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(254, 248, 240, 0.3) 0%,
+    rgba(255, 253, 247, 0.6) 100%
+  );
+  backdrop-filter: blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-dark);
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--deep-brown);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(212, 175, 55, 0.1);
+}
+
+.hero-content p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Luxury CTA Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--deep-brown);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  border: 1px solid var(--gold);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--deep-brown);
+  border: 1px solid var(--gold);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--gold-light);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+/* Featured Ritual Moment */
+.featured-ritual {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--blush) 100%);
+}
+
+.ritual-feature-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+}
+
+.ritual-feature-image {
+  flex: 1 1 500px;
+}
+
+.ritual-feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ritual-feature-image img:hover {
+  transform: scale(1.03);
+}
+
+.ritual-feature-text {
+  flex: 1 1 450px;
+}
+
+.ritual-feature-text .subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.ritual-feature-text h2 {
+  color: var(--deep-brown);
+  margin: 1rem 0 1.5rem 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+}
+
+.ritual-feature-text > p {
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  line-height: 1.9;
+}
+
+.ritual-features {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+
+.feature-item:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(10px);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  font-size: 1.1rem;
+  color: var(--deep-brown);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Campaign Promotional Banner */
+.promo-campaign {
+  padding: 0;
+  background: var(--deep-brown);
+  overflow: hidden;
+}
+
+.promo-banner-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  align-items: center;
+}
+
+.promo-visual {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.promo-campaign:hover .promo-visual img {
+  transform: scale(1.05);
+}
+
+.promo-text {
+  padding: 4rem 5rem;
+  background: var(--deep-brown);
+  color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.promo-label {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.promo-text h2 {
+  color: var(--gold-light);
+  margin: 0 0 1.5rem 0;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.promo-text p {
+  color: var(--blush);
+  margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.promo-text .btn {
+  align-self: flex-start;
+}
+
+/* Ritual Categories */
+.categories {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--warm-white) 0%,
+    var(--cream) 100%
+  );
+  text-align: center;
+}
+
+.categories h2 {
+  margin-bottom: 3rem;
+  color: var(--deep-brown);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.category {
+  display: block;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--gold), var(--rose-gold));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.category:hover::after {
+  opacity: 1;
+}
+
+.category img {
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category:hover img {
+  transform: scale(1.08);
+}
+
+.category h3 {
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(228, 195, 173, 0.1)
+  );
+  color: var(--deep-brown);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
+}
+
+.category:hover h3 {
+  background: linear-gradient(135deg, var(--gold-light), var(--rose-gold));
+  color: var(--deep-brown);
+}
+
+/* Ritual Products */
+.products {
+  padding: 6rem 0;
+  background: var(--warm-white);
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 3rem;
+  color: var(--deep-brown);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-light);
+}
+
+.product-image {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.product-info h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--deep-brown);
+  letter-spacing: 1px;
+}
+
+.product-info .price {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating-score {
+  color: var(--text-medium);
+  margin-left: 0.75rem;
+  font-weight: 300;
+}
+
+/* Highlight Ritual Section */
+.highlight {
+  background: linear-gradient(
+    135deg,
+    var(--blush) 0%,
+    var(--rose-gold) 50%,
+    var(--gold-light) 100%
+  );
+  color: var(--deep-brown);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(255, 255, 255, 0.3),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.highlight-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.highlight-text {
+  flex: 1 1 300px;
+}
+
+.highlight-text .subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-text h2 {
+  color: var(--deep-brown);
+  margin: 1rem 0 1.5rem 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+}
+
+.highlight-text p {
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  line-height: 1.9;
+}
+
+.highlight-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.highlight-image img {
+  max-width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-image img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* Brand Transformation Story */
+.brand-transformation {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--cream) 100%);
+  overflow: hidden;
+}
+
+.transformation-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+}
+
+.transformation-image {
+  flex: 1 1 500px;
+  position: relative;
+}
+
+.transformation-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transformation-image img:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+.transformation-text {
+  flex: 1 1 400px;
+}
+
+.transformation-text .subtitle {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.transformation-text h2 {
+  color: var(--deep-brown);
+  margin: 1rem 0 1.5rem 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+}
+
+.transformation-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  line-height: 1.9;
+}
+
+.transformation-quote {
+  font-size: 1.3rem !important;
+  color: var(--gold) !important;
+  font-style: italic;
+  margin: 2rem 0 !important;
+  padding-left: 2rem;
+  border-left: 3px solid var(--gold);
+  font-weight: 300;
+}
+
+/* Wash Day Reset Ritual */
+.wash-day-ritual {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--blush) 0%,
+    var(--rose-gold) 100%
+  );
+  position: relative;
+}
+
+.wash-day-ritual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    rgba(255, 255, 255, 0.3),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.wash-day-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.wash-day-text {
+  flex: 1 1 450px;
+  order: 2;
+}
+
+.wash-day-text .subtitle {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: var(--deep-brown);
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.wash-day-text h2 {
+  color: var(--deep-brown);
+  margin: 1rem 0 1.5rem 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+}
+
+.wash-day-text p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.9;
+}
+
+.ritual-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.ritual-benefits li {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+.wash-day-image {
+  flex: 1 1 450px;
+  order: 1;
+}
+
+.wash-day-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(62, 39, 35, 0.2);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wash-day-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Community Trust Section */
+.community-trust {
+  padding: 6rem 0;
+  background: var(--warm-white);
+  text-align: center;
+}
+
+.community-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.community-inner h2 {
+  color: var(--deep-brown);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.community-intro {
+  font-size: 1.15rem;
+  color: var(--text-medium);
+  line-height: 1.9;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.community-image {
+  margin: 3rem 0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.community-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.community-image:hover img {
+  transform: scale(1.05);
+}
+
+.trust-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.pillar {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  transition: all 0.4s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-light);
+}
+
+.pillar h3 {
+  font-size: 1.3rem;
+  color: var(--deep-brown);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.pillar p {
+  font-size: 1rem;
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Wellness Ritual Newsletter */
+.subscribe {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, var(--cream) 0%, var(--blush) 100%);
+  text-align: center;
+  position: relative;
+}
+
+.subscribe-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+.subscribe h2 {
+  margin-bottom: 1rem;
+  color: var(--deep-brown);
+  font-weight: 300;
+}
+
+.subscribe p {
+  margin-bottom: 2.5rem;
+  color: var(--text-medium);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 1rem 1.5rem;
+  flex: 1 1 300px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.4s ease;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  background: #fff;
+}
+
+.subscribe-form button {
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--deep-brown);
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.subscribe-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+.subscribe-form button:hover {
+  background-color: var(--secondary);
+}
+
+/* Luxury Wellness Footer */
+.footer {
+  background: linear-gradient(
+    to bottom,
+    var(--deep-brown) 0%,
+    var(--soft-brown) 100%
+  );
+  color: var(--gold-light);
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer-brand {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand h3 {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.footer-identity {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 20px;
+  margin: 1rem 0;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-identity p {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.social-gallery {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-gallery img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.social-gallery img:hover {
+  transform: scale(1.05);
+  border-color: var(--gold);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--gold-light);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+  color: var(--gold-light);
+}
+
+/* Braids Gallery Section */
+.braids-gallery {
+  padding: 4rem 0;
+  background-color: var(--light);
+}
+
+.braids-gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 3/4;
+  background-color: #fff;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Merch Section */
+.merch-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  color: var(--text-light);
+}
+
+.merch-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.merch-section .section-intro {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.merch-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.merch-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.merch-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Luxury Page Header */
+.page-header {
+  background: linear-gradient(
+    135deg,
+    var(--deep-brown) 0%,
+    var(--soft-brown) 50%,
+    var(--gold) 100%
+  );
+  padding: 6rem 0 4rem;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(212, 175, 55, 0.2),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--warm-white);
+  opacity: 0.95;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Shop the Look Page */
+.hairstyles-page {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--warm-white) 0%,
+    var(--cream) 50%,
+    var(--blush) 100%
+  );
+}
+
+.hairstyles-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+
+.hairstyle-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid rgba(212, 175, 55, 0.1);
+}
+
+.hairstyle-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(228, 195, 173, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hairstyle-card:hover::before {
+  opacity: 1;
+}
+
+.hairstyle-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25);
+  border-color: var(--gold-light);
+}
+
+.hairstyle-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #fff;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hairstyle-card:hover img {
+  transform: scale(1.03);
+}
+
+.hairstyle-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(62, 39, 35, 0.95) 0%,
+    rgba(62, 39, 35, 0.85) 70%,
+    transparent 100%
+  );
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.hairstyle-card:hover .hairstyle-info {
+  transform: translateY(0);
+}
+
+.hairstyle-info h3 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.hairstyle-info p {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+
+.hairstyle-info .btn {
+  width: 100%;
+  padding: 0.9rem 2rem;
+  font-size: 0.9rem;
+}
+
+/* Brand Story Section */
+.brand-story {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--blush) 100%);
+  text-align: center;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+.story-content h2 {
+  color: var(--deep-brown);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.story-content p {
+  color: var(--text-medium);
+  font-size: 1.15rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.story-content p:last-child {
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Luxury Merch Page */
+.merch-page {
+  padding: 6rem 0;
+  background: var(--warm-white);
+}
+
+.merch-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.merch-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid rgba(212, 175, 55, 0.15);
+}
+
+.merch-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.05),
+    rgba(228, 195, 173, 0.05)
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.merch-card:hover::before {
+  opacity: 1;
+}
+
+.merch-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(212, 175, 55, 0.25);
+  border-color: var(--gold);
+}
+
+.merch-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, var(--cream) 100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 2rem;
+}
+
+.merch-card:hover img {
+  transform: scale(1.05);
+}
+
+.merch-info {
+  padding: 2.5rem;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    rgba(254, 248, 240, 0.95),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+
+.merch-info h3 {
+  color: var(--deep-brown);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.merch-info p {
+  color: var(--text-medium);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.merch-info .price {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.merch-info .size-note {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Luxury Mobile-First Responsive Design */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    height: 75vh;
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .highlight-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .highlight-text {
+    order: 2;
+  }
+
+  .highlight-image {
+    order: 1;
+  }
+
+  .highlight-image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hairstyles-full-grid,
+  .merch-full-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .subscribe-inner {
+    padding: 2rem 1.5rem;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input[type="email"],
+  .subscribe-form button {
+    width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .story-content {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Responsive Styles for New Photo Sections */
+  .ritual-feature-inner {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ritual-text,
+  .ritual-visual {
+    flex: 1;
+  }
+
+  .ritual-text h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .brand-transformation-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .transformation-story-section h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .wash-day-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wash-day-text h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .community-trust h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .promo-banner-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .promo-visual {
+    min-height: 350px;
+  }
+
+  .promo-text {
+    padding: 3rem 1.5rem;
+  }
+
+  .promo-text h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .footer-brand h3 {
+    font-size: 1.5rem;
+  }
+
+  .social-gallery {
+    gap: 1rem;
+  }
+
+  .social-gallery img {
+    width: 100px;
+    height: 100px;
+  }
+}
