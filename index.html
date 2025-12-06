@@ -11,6 +11,88 @@
     />
     <!-- Link external stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- JSON-LD Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "AfroQueen Beauty Supply",
+      "description": "Luxury Afro-Caribbean wellness salon specializing in natural hair care, protective braiding, and holistic crown rituals. Panama Black-Owned Business.",
+      "image": "https://onyxempire8282.github.io/AFROQUEEN/luxury-images/1-homepage-hero.jpeg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PH Bayview, planta baja a la parte de atrás, C. República de Haití",
+        "addressLocality": "Panama City",
+        "addressRegion": "Panamá Province",
+        "addressCountry": "PA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "8.9936034",
+        "longitude": "-79.5195617"
+      },
+      "telephone": "+507-6722-3181",
+      "url": "https://onyxempire8282.github.io/AFROQUEEN/",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Thursday"],
+          "opens": "08:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "10:00",
+          "closes": "15:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday"],
+          "opens": "10:00",
+          "closes": "19:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "16",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Verified Customer"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "This is the place to go for vacation hair at a great price!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Verified Customer"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "They truly understand Black hair."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Verified Customer"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "The only place in Panama I trust with my natural hair."
+        }
+      ],
+      "sameAs": [
+        "https://github.com/Onyxempire8282/AFROQUEEN"
+      ]
+    }
+    </script>
   </head>
   <body>
     <!-- Announcement bar -->
@@ -65,7 +147,7 @@
     <section class="hero">
       <img
         src="luxury-images/1-homepage-hero.jpeg"
-        alt="Luxury Afro-Caribbean Queen Wellness - Signature Crown with Palm Shadows"
+        alt="Elegant Black woman with natural crown hairstyle relaxing under tropical palm shadows, embodying Afro-Caribbean luxury wellness and divine feminine energy at Panama's premier natural hair salon"
         class="hero-img"
       />
       <div class="hero-overlay"></div>
@@ -173,70 +255,76 @@
       </div>
     </section>
 
-    <!-- Ritual Best Sellers -->
+    <!-- Ritual Kits -->
     <section id="best" class="products" id="ritual">
       <div class="container">
-        <h2>Most Loved Rituals</h2>
+        <h2>Sacred Ritual Kits</h2>
+        <p class="section-subtitle">Holistic crown care systems designed for complete wellness</p>
         <div class="product-grid">
-          <!-- Product card -->
-          <article class="product-card">
-            <img
-              src="images/category1.png"
-              alt="Braiding hair pack"
-              class="product-image"
-            />
-            <div class="product-info">
-              <h4>Knotless&nbsp;Braid&nbsp;Bundle</h4>
-              <span class="price">$20.00</span>
-              <div class="rating" aria-label="4.8 out of 5 stars">
-                <span>★★★★★</span>
-                <span class="rating-score">4.8 (23)</span>
-              </div>
-              <button class="btn btn-secondary" type="button">
-                Add&nbsp;to&nbsp;Cart
-              </button>
-            </div>
-          </article>
-          <!-- Product card -->
-          <article class="product-card">
+          <!-- Wash Day Reset Kit -->
+          <article class="product-card" onclick="openKitModal('wash-day')">
             <img
               src="images/category2.png"
-              alt="Hair oil bottle with combs"
+              alt="Wash Day Reset Kit containing Caribbean botanical shampoo, deep conditioning treatment mask, hydrating leave-in conditioner, and microfiber hair towel for gentle drying"
               class="product-image"
             />
             <div class="product-info">
-              <h4>Growth&nbsp;Oil&nbsp;Serum</h4>
-              <span class="price">$12.00</span>
-              <div class="rating" aria-label="4.7 out of 5 stars">
+              <h4>Wash Day Reset Kit</h4>
+              <p class="kit-description">Complete cleanse & hydration ritual for healthy scalp foundation</p>
+              <span class="price">$48.00</span>
+              <div class="rating" aria-label="5 out of 5 stars">
                 <span>★★★★★</span>
-                <span class="rating-score">4.7 (17)</span>
+                <span class="rating-score">5.0 (34)</span>
               </div>
               <button class="btn btn-secondary" type="button">
-                Add&nbsp;to&nbsp;Cart
+                Add&nbsp;to&nbsp;Routine
               </button>
             </div>
           </article>
-          <!-- Product card -->
-          <article class="product-card">
+          
+          <!-- Protective Style Survival Kit -->
+          <article class="product-card" onclick="openKitModal('protective')">
             <img
-              src="images/category3.png"
-              alt="Hair accessories set"
+              src="images/category1.png"
+              alt="Protective Style Survival Kit with nourishing scalp oil, braid refresher spray, silk bonnet for nighttime protection, and edge control for sleek styling"
               class="product-image"
             />
             <div class="product-info">
-              <h4>Accessory&nbsp;Set</h4>
-              <span class="price">$8.00</span>
-              <div class="rating" aria-label="4.5 out of 5 stars">
-                <span>★★★★☆</span>
-                <span class="rating-score">4.5 (11)</span>
+              <h4>Protective Style Survival Kit</h4>
+              <p class="kit-description">Everything needed to maintain braids, twists & locs with grace</p>
+              <span class="price">$55.00</span>
+              <div class="rating" aria-label="4.9 out of 5 stars">
+                <span>★★★★★</span>
+                <span class="rating-score">4.9 (28)</span>
               </div>
               <button class="btn btn-secondary" type="button">
-                Add&nbsp;to&nbsp;Cart
+                Add&nbsp;to&nbsp;Routine
+              </button>
+            </div>
+          </article>
+          
+          <!-- Growth & Edges Recovery Kit -->
+          <article class="product-card" onclick="openKitModal('growth')">
+            <img
+              src="images/category3.png"
+              alt="Growth and Edges Recovery Kit featuring hair growth serum with natural botanicals, edge butter for temple restoration, scalp massager tool, and application brush"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h4>Growth & Edges Recovery Kit</h4>
+              <p class="kit-description">Stimulate growth & restore temple health with botanical care</p>
+              <span class="price">$62.00</span>
+              <div class="rating" aria-label="4.8 out of 5 stars">
+                <span>★★★★★</span>
+                <span class="rating-score">4.8 (41)</span>
+              </div>
+              <button class="btn btn-secondary" type="button">
+                Add&nbsp;to&nbsp;Routine
               </button>
             </div>
           </article>
         </div>
-        <a href="#" class="btn btn-outline">Shop&nbsp;Best&nbsp;Sellers</a>
+        <a href="merch.html" class="btn btn-outline">Explore All Ritual Kits</a>
       </div>
     </section>
 
@@ -357,13 +445,19 @@
     <!-- Wellness Ritual Newsletter -->
     <section class="subscribe">
       <div class="container subscribe-inner">
-        <h2>Join the Queen Wellness Circle</h2>
+        <div class="newsletter-incentive">
+          <span class="gift-badge">🎁 FREE GIFT</span>
+          <h2>Join the Queen Wellness Circle</h2>
+          <p class="incentive-text">
+            Get your <strong>FREE Crown Care Ritual Guide</strong> (digital download) when you subscribe!
+          </p>
+        </div>
         <p>
           Receive sacred ritual guides, exclusive luxury offers, and divine
           crown care wisdom. Embrace your soft power with our Afro-Caribbean
           wellness community.
         </p>
-        <form class="subscribe-form" onsubmit="event.preventDefault();">
+        <form class="subscribe-form" onsubmit="handleNewsletterSignup(event);">
           <label for="email" class="visually-hidden">Email Address</label>
           <input
             type="email"
@@ -372,8 +466,11 @@
             placeholder="Enter your email for ritual wisdom"
             required
           />
-          <button type="submit" class="btn btn-primary">Join the Circle</button>
+          <button type="submit" class="btn btn-primary">Get Free Guide</button>
         </form>
+        <p class="privacy-note">
+          🔒 Your email is safe with us. We respect your privacy and will never share your information. Unsubscribe anytime.
+        </p>
       </div>
     </section>
 
@@ -603,6 +700,14 @@
         />
       </svg>
     </a>
+
+    <!-- Ritual Kit Modal -->
+    <div id="kit-modal" class="modal" onclick="closeKitModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeKitModal()">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

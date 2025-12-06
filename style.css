@@ -2277,3 +2277,358 @@ p {
   border-radius: 8px;
   text-align: center;
 }
+
+/* Newsletter Incentive Styles */
+.newsletter-incentive {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.gift-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--deep-brown);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.incentive-text {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin: 1rem 0;
+}
+
+.incentive-text strong {
+  color: var(--gold-light);
+}
+
+.privacy-note {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  opacity: 0.8;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--deep-brown);
+  color: var(--gold-light);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 90%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.toast-notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-medium);
+}
+
+.breadcrumb a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--deep-brown);
+}
+
+.breadcrumb .separator {
+  color: var(--text-medium);
+  opacity: 0.5;
+}
+
+.breadcrumb .current {
+  color: var(--deep-brown);
+  font-weight: 500;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--cream);
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--deep-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-group select {
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  background: white;
+  color: var(--deep-brown);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-group select:hover {
+  border-color: var(--deep-brown);
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: var(--deep-brown);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin: -2rem 0 3rem 0;
+  font-weight: 300;
+}
+
+/* Kit Description in Cards */
+.kit-description {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.product-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10001;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 3rem;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--text-medium);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--deep-brown);
+}
+
+.kit-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kit-modal-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.kit-modal-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--deep-brown);
+  margin: 0;
+  text-align: center;
+}
+
+.kit-modal-price {
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.kit-modal-description {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  text-align: center;
+  font-style: italic;
+}
+
+.kit-section {
+  background: var(--cream);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.kit-section h3 {
+  color: var(--deep-brown);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.kit-includes,
+.kit-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kit-includes li,
+.kit-steps li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kit-includes li:last-child,
+.kit-steps li:last-child {
+  border-bottom: none;
+}
+
+.kit-steps {
+  counter-reset: step-counter;
+}
+
+.kit-steps li {
+  counter-increment: step-counter;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.kit-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  background: var(--gold);
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.kit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-large {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .kit-actions {
+    flex-direction: column;
+  }
+  
+  .btn-large {
+    width: 100%;
+  }
+}

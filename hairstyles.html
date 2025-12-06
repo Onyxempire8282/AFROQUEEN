@@ -64,6 +64,11 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">›</span>
+          <span class="current">Services</span>
+        </nav>
         <h1>Shop the Look</h1>
         <p>Divine crown rituals · Soft power styling · Tropical queen energy</p>
       </div>
@@ -72,11 +77,42 @@
     <!-- Hairstyles Gallery -->
     <section class="hairstyles-page">
       <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <div class="filter-group">
+            <label for="filter-length">Length:</label>
+            <select id="filter-length" onchange="filterStyles()">
+              <option value="all">All Lengths</option>
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-time">Installation Time:</label>
+            <select id="filter-time" onchange="filterStyles()">
+              <option value="all">All Times</option>
+              <option value="quick">Under 4 hours</option>
+              <option value="standard">4-6 hours</option>
+              <option value="extended">6+ hours</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-care">Care Level:</label>
+            <select id="filter-care" onchange="filterStyles()">
+              <option value="all">All Levels</option>
+              <option value="low">Low Maintenance</option>
+              <option value="medium">Medium Maintenance</option>
+              <option value="high">High Maintenance</option>
+            </select>
+          </div>
+        </div>
+
         <div class="hairstyles-full-grid">
-          <div class="hairstyle-card">
+          <div class="hairstyle-card" data-length="long" data-time="standard" data-care="low">
             <img
               src="HAIR STYLES/Whisk_5cznwuzmizgolv2mtedolhtlxktm00cnzmmytem.png"
-              alt="Goddess Knotless Braids"
+              alt="Elegant Afro-Caribbean woman wearing long goddess knotless braids with soft curly ends, showcasing protective styling for natural hair"
             />
             <div class="hairstyle-info">
               <h3>Goddess Knotless</h3>
