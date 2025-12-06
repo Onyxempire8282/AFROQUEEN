@@ -1842,3 +1842,438 @@ p {
     height: 100px;
   }
 }
+
+/* ===================================================================
+   PHASE 2: BUSINESS FUNCTIONALITY COMPONENTS
+   =================================================================== */
+
+/* Header WhatsApp & Booking Buttons */
+.btn-whatsapp,
+.btn-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background: #1fb855;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-book {
+  background: var(--gold);
+  color: var(--deep-brown);
+}
+
+.btn-book:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-float.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.whatsapp-float.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--warm-white) 0%,
+    var(--cream) 100%
+  );
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--deep-brown);
+  margin-bottom: 4rem;
+  letter-spacing: 0.5px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info .info-block {
+  margin-bottom: 3rem;
+}
+
+.contact-info h3 {
+  font-size: 1.3rem;
+  color: var(--deep-brown);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-info .address {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+}
+
+.direction-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hours-list {
+  list-style: none;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.hours-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.hours-list .note {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+  font-style: italic;
+}
+
+.phone-link {
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--deep-brown);
+}
+
+/* Google Reviews Display */
+.reviews-display {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.google-rating {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rating-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stars {
+  font-size: 2rem;
+  color: #fbbc04;
+  letter-spacing: 2px;
+}
+
+.rating-number {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--deep-brown);
+}
+
+.review-count {
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+}
+
+.trust-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.keyword {
+  background: var(--blush);
+  color: var(--deep-brown);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Reviews Carousel */
+.reviews-carousel {
+  position: relative;
+  min-height: 120px;
+}
+
+.review-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.review-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--soft-brown);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  background: var(--gold);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  opacity: 0.7;
+}
+
+/* Booking Section */
+.booking-section {
+  padding: 6rem 0;
+  background: var(--deep-brown);
+  text-align: center;
+  color: white;
+}
+
+.booking-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+}
+
+.booking-subtitle {
+  font-size: 1.2rem;
+  color: var(--blush);
+  margin-bottom: 3rem;
+}
+
+.booking-options {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-large {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.booksy-embed {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Footer Updates */
+.footer-google-badge {
+  margin-top: 1rem;
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.footer-google-badge .stars {
+  color: #fbbc04;
+  font-size: 1.2rem;
+}
+
+.footer-section {
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.footer-address {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--blush);
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--gold-light);
+}
+
+.footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-whatsapp:hover {
+  color: #1fb855;
+  transform: translateX(5px);
+}
+
+.legal-notice {
+  font-size: 0.75rem;
+  color: var(--soft-brown);
+  margin-top: 1rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Responsive Adjustments for New Components */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .direction-buttons {
+    flex-direction: column;
+  }
+
+  .direction-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .reviews-display {
+    padding: 2rem 1.5rem;
+  }
+
+  .booking-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .booking-options .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-whatsapp,
+  .btn-book {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-whatsapp svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Service Care Level Indicator */
+.care-level {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  padding: 0.5rem;
+  background: var(--blush);
+  border-radius: 8px;
+  text-align: center;
+}
