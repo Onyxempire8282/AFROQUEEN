@@ -115,22 +115,24 @@ function bookThisStyle(styleName) {
     `¡Hola! I'd like to book an appointment for ${styleName}. Could you provide availability and pricing? Thank you!`
   );
   window.open(`https://wa.me/50767223181?text=${message}`, "_blank");
-  showToast("Thank you, Queen! Your booking request is being sent to WhatsApp.");
+  showToast(
+    "Thank you, Queen! Your booking request is being sent to WhatsApp."
+  );
 }
 
 // Newsletter Signup Handler
 function handleNewsletterSignup(event) {
   event.preventDefault();
   const email = document.getElementById("email").value;
-  
+
   // Here you would normally send to your email service
   console.log("Newsletter signup:", email);
-  
+
   // Show success message
   showToast(
     "🎁 Thank you! Check your email for your FREE Crown Care Ritual Guide!"
   );
-  
+
   // Reset form
   event.target.reset();
 }
@@ -165,42 +167,46 @@ const ritualKits = {
     name: "Wash Day Reset Kit",
     price: "$48.00",
     image: "images/category2.png",
-    description: "Complete cleanse & hydration ritual for a healthy scalp foundation",
+    description:
+      "Complete cleanse & hydration ritual for a healthy scalp foundation",
     includes: [
       "Caribbean Botanical Shampoo (8oz) - Gentle cleanse with hibiscus & coconut water",
       "Deep Conditioning Treatment Mask (6oz) - Intensive moisture with shea butter & argan oil",
       "Hydrating Leave-In Conditioner (4oz) - Daily protection with aloe vera & jojoba",
-      "Microfiber Hair Towel - Reduces breakage & frizz during drying"
+      "Microfiber Hair Towel - Reduces breakage & frizz during drying",
     ],
     howToUse: [
       "Step 1: Wet hair thoroughly with warm water to open cuticles",
       "Step 2: Apply shampoo, massage scalp gently for 2-3 minutes, rinse completely",
       "Step 3: Apply deep conditioning mask from roots to ends, cover with cap, wait 15-20 minutes",
       "Step 4: Rinse with cool water, gently squeeze excess with microfiber towel",
-      "Step 5: Apply leave-in conditioner to damp hair, style as desired"
+      "Step 5: Apply leave-in conditioner to damp hair, style as desired",
     ],
-    benefits: "Restores moisture balance, promotes scalp health, reduces breakage, enhances natural texture"
+    benefits:
+      "Restores moisture balance, promotes scalp health, reduces breakage, enhances natural texture",
   },
-  "protective": {
+  protective: {
     name: "Protective Style Survival Kit",
     price: "$55.00",
     image: "images/category1.png",
-    description: "Everything needed to maintain braids, twists & locs with grace",
+    description:
+      "Everything needed to maintain braids, twists & locs with grace",
     includes: [
       "Nourishing Scalp Oil (2oz) - Peppermint & tea tree for itch relief & scalp health",
       "Braid Refresher Spray (8oz) - Witch hazel & rose water to refresh styles",
       "Silk Bonnet - Premium grade silk to protect styles while sleeping",
-      "Edge Control (2oz) - Natural hold with castor oil & beeswax"
+      "Edge Control (2oz) - Natural hold with castor oil & beeswax",
     ],
     howToUse: [
       "Step 1: Apply scalp oil directly to scalp 2-3x weekly, massage gently",
       "Step 2: Spray braid refresher on styles in the morning to revive shine",
       "Step 3: Wear silk bonnet every night to prevent frizz & maintain tension",
-      "Step 4: Apply edge control to baby hairs and edges for sleek finish"
+      "Step 4: Apply edge control to baby hairs and edges for sleek finish",
     ],
-    benefits: "Extends protective style life, prevents itching, maintains moisture, preserves edges"
+    benefits:
+      "Extends protective style life, prevents itching, maintains moisture, preserves edges",
   },
-  "growth": {
+  growth: {
     name: "Growth & Edges Recovery Kit",
     price: "$62.00",
     image: "images/category3.png",
@@ -209,27 +215,28 @@ const ritualKits = {
       "Hair Growth Serum (1oz) - Rosemary, biotin & caffeine to stimulate follicles",
       "Edge Butter (2oz) - Rich blend of castor oil, coconut & vitamin E",
       "Scalp Massager Tool - Silicone bristles increase circulation",
-      "Application Brush - Precision applicator for temples & hairline"
+      "Application Brush - Precision applicator for temples & hairline",
     ],
     howToUse: [
       "Step 1: Part hair in sections, apply growth serum directly to scalp nightly",
       "Step 2: Use scalp massager in circular motions for 5 minutes to boost circulation",
       "Step 3: Apply edge butter to temples and hairline morning & night",
       "Step 4: Use application brush for precise coverage on thinning areas",
-      "Consistency is key - use for 90 days minimum for visible results"
+      "Consistency is key - use for 90 days minimum for visible results",
     ],
-    benefits: "Stimulates dormant follicles, thickens edges, improves scalp circulation, reduces breakage"
-  }
+    benefits:
+      "Stimulates dormant follicles, thickens edges, improves scalp circulation, reduces breakage",
+  },
 };
 
 // Open Kit Modal
 function openKitModal(kitId) {
   const kit = ritualKits[kitId];
   if (!kit) return;
-  
+
   const modal = document.getElementById("kit-modal");
   const modalBody = document.getElementById("modal-body");
-  
+
   modalBody.innerHTML = `
     <div class="kit-modal-content">
       <img src="${kit.image}" alt="${kit.name}" class="kit-modal-image">
@@ -240,14 +247,14 @@ function openKitModal(kitId) {
       <div class="kit-section">
         <h3>What's Included:</h3>
         <ul class="kit-includes">
-          ${kit.includes.map(item => `<li>${item}</li>`).join('')}
+          ${kit.includes.map((item) => `<li>${item}</li>`).join("")}
         </ul>
       </div>
       
       <div class="kit-section">
         <h3>How to Use:</h3>
         <ol class="kit-steps">
-          ${kit.howToUse.map(step => `<li>${step}</li>`).join('')}
+          ${kit.howToUse.map((step) => `<li>${step}</li>`).join("")}
         </ol>
       </div>
       
@@ -260,21 +267,27 @@ function openKitModal(kitId) {
         <button class="btn btn-primary btn-large" onclick="addToRoutine('${kitId}')">
           Add to Routine - ${kit.price}
         </button>
-        <a href="https://wa.me/50767223181?text=Hola!%20I'm%20interested%20in%20the%20${encodeURIComponent(kit.name)}.%20Could%20you%20provide%20more%20information?" 
+        <a href="https://wa.me/50767223181?text=Hola!%20I'm%20interested%20in%20the%20${encodeURIComponent(
+          kit.name
+        )}.%20Could%20you%20provide%20more%20information?" 
            class="btn btn-secondary btn-large" target="_blank">
           Ask About This Kit
         </a>
       </div>
     </div>
   `;
-  
+
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
 
 // Close Kit Modal
 function closeKitModal(event) {
-  if (!event || event.target.id === "kit-modal" || event.target.className === "modal-close") {
+  if (
+    !event ||
+    event.target.id === "kit-modal" ||
+    event.target.className === "modal-close"
+  ) {
     const modal = document.getElementById("kit-modal");
     modal.style.display = "none";
     document.body.style.overflow = "auto";
@@ -284,7 +297,9 @@ function closeKitModal(event) {
 // Add to Routine (demo function)
 function addToRoutine(kitId) {
   const kit = ritualKits[kitId];
-  showToast(`✨ ${kit.name} added to your routine! (Demo mode - no payment processed)`);
+  showToast(
+    `✨ ${kit.name} added to your routine! (Demo mode - no payment processed)`
+  );
   setTimeout(() => closeKitModal(), 1500);
 }
 
@@ -293,18 +308,18 @@ function filterStyles() {
   const lengthFilter = document.getElementById("filter-length")?.value || "all";
   const timeFilter = document.getElementById("filter-time")?.value || "all";
   const careFilter = document.getElementById("filter-care")?.value || "all";
-  
+
   const cards = document.querySelectorAll(".hairstyle-card");
-  
-  cards.forEach(card => {
+
+  cards.forEach((card) => {
     const length = card.dataset.length || "medium";
     const time = card.dataset.time || "standard";
     const care = card.dataset.care || "low";
-    
+
     const lengthMatch = lengthFilter === "all" || length === lengthFilter;
     const timeMatch = timeFilter === "all" || time === timeFilter;
     const careMatch = careFilter === "all" || care === careFilter;
-    
+
     if (lengthMatch && timeMatch && careMatch) {
       card.style.display = "flex";
       card.style.animation = "fadeInUp 0.5s ease";
