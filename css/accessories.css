@@ -1,0 +1,134 @@
+/*
+  AfroQueen - Accessories Page Specific Styles
+  -------------------------------------------------------------------------
+  Styles unique to the accessories page
+*/
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--deep-brown) 0%, var(--soft-brown) 50%, var(--gold) 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--warm-white);
+  opacity: 0.95;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Accessories Page */
+.accessories-page {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, var(--warm-white) 0%, var(--cream) 100%);
+}
+
+.accessories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.accessory-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.accessory-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-light);
+}
+
+.accessory-image {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accessory-card:hover .accessory-image {
+  transform: scale(1.05);
+}
+
+.accessory-info {
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.accessory-info h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--deep-brown);
+}
+
+.accessory-description {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.accessory-info .price {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating-score {
+  color: var(--text-medium);
+  margin-left: 0.75rem;
+  font-weight: 300;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .accessories-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

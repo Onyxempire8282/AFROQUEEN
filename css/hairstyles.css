@@ -1,0 +1,199 @@
+/*
+  AfroQueen - Hairstyles/Services Page Specific Styles
+  -------------------------------------------------------------------------
+  Styles unique to the hairstyles services page
+*/
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--deep-brown) 0%, var(--soft-brown) 50%, var(--gold) 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--warm-white);
+  opacity: 0.95;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Hairstyles Page */
+.hairstyles-page {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom, var(--warm-white) 0%, var(--cream) 50%, var(--blush) 100%);
+}
+
+.hairstyles-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 3.5rem;
+  margin-top: 3rem;
+}
+
+.hairstyle-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 2px solid rgba(212, 175, 55, 0.1);
+}
+
+.hairstyle-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(228, 195, 173, 0.1));
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hairstyle-card:hover::before {
+  opacity: 1;
+}
+
+.hairstyle-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25);
+  border-color: var(--gold-light);
+}
+
+.hairstyle-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: #fff;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hairstyle-card:hover img {
+  transform: scale(1.03);
+}
+
+.hairstyle-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(62, 39, 35, 0.95) 0%, rgba(62, 39, 35, 0.85) 70%, transparent 100%);
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2;
+}
+
+.hairstyle-card:hover .hairstyle-info {
+  transform: translateY(0);
+}
+
+.hairstyle-info h3 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.hairstyle-info p {
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+
+.hairstyle-info .btn {
+  width: 100%;
+  padding: 0.9rem 2rem;
+  font-size: 0.9rem;
+}
+
+/* Brand Story */
+.brand-story {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--blush) 100%);
+  text-align: center;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+}
+
+.story-content h2 {
+  color: var(--deep-brown);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.story-content p {
+  color: var(--text-medium);
+  font-size: 1.15rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.story-content p:last-child {
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hairstyles-full-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .story-content {
+    padding: 2rem 1.5rem;
+  }
+}

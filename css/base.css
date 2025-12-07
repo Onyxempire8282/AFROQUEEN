@@ -1,0 +1,474 @@
+/*
+  AfroQueen Beauty Supply - Base Styles
+  -------------------------------------------------------------------------
+  Shared styles across all pages: variables, resets, typography, navigation, footer
+*/
+
+:root {
+  /* Luxury Gold & Warm Tones */
+  --gold: #d4af37;
+  --gold-light: #e8d4a0;
+  --rose-gold: #e4c3ad;
+
+  /* Soft Neutrals */
+  --cream: #fef8f0;
+  --warm-white: #fffdf7;
+  --soft-brown: #8b7355;
+  --deep-brown: #3e2723;
+
+  /* Accent Colors */
+  --caribbean-teal: #7eb8b3;
+  --blush: #f4e4dc;
+
+  /* Text Colors */
+  --text-dark: #3e2723;
+  --text-medium: #6d5d52;
+  --text-light: #ffffff;
+
+  /* Primary Brand Colors */
+  --primary: var(--gold);
+  --secondary: var(--rose-gold);
+  --accent: var(--caribbean-teal);
+  --light: var(--cream);
+  --dark: var(--deep-brown);
+}
+
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background-color: var(--warm-white);
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+/* Luxury Typography */
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: var(--deep-brown);
+  line-height: 1.4;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h3, h4 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 1.5rem;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Announcement bar */
+.top-bar {
+  background: linear-gradient(135deg, var(--deep-brown) 0%, var(--soft-brown) 100%);
+  color: var(--gold);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.top-bar p {
+  color: var(--gold);
+  margin-bottom: 0;
+}
+
+/* Navigation */
+.nav {
+  background: rgba(255, 253, 247, 0.98);
+  backdrop-filter: blur(10px);
+  color: var(--text-dark);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  color: var(--deep-brown);
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.logo:hover {
+  color: var(--gold);
+}
+
+.logo .highlight {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.menu a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.4s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.actions a {
+  margin-left: 1.5rem;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+}
+
+.actions a:hover {
+  transform: translateY(-1px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--deep-brown);
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  border: 1px solid var(--gold);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--deep-brown);
+  border: 1px solid var(--gold);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to bottom, var(--deep-brown) 0%, var(--soft-brown) 100%);
+  color: var(--gold-light);
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem;
+  }
+
+  .footer-left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .footer-identity {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+  }
+
+  .footer-info {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    text-align: center;
+  }
+}
+
+.footer-section h4 {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.footer-address {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.footer-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--gold-light);
+}
+
+.footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25d366;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-whatsapp:hover {
+  color: #1fb855;
+  transform: translateX(5px);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social a {
+  color: var(--gold);
+  transition: all 0.3s ease;
+  display: inline-flex;
+}
+
+.footer-social a:hover {
+  color: var(--gold-light);
+  transform: translateY(-3px);
+}
+
+.footer-identity {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 20px;
+  margin: 1rem 0;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-identity p {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.footer-info {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--gold-light);
+  font-weight: 300;
+}
+
+.footer-info p {
+  margin: 0.5rem 0;
+  color: var(--gold-light);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  .footer-left, .footer-right {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}

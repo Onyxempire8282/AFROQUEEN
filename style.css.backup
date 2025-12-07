@@ -162,6 +162,11 @@ select {
   border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
+.top-bar p {
+  color: var(--gold);
+  margin-bottom: 0;
+}
+
 /* Navigation */
 .nav {
   background: rgba(255, 253, 247, 0.98);

@@ -1,0 +1,321 @@
+/*
+  AfroQueen - Crown Care/Ritual Kits Page Specific Styles
+  -------------------------------------------------------------------------
+  Styles unique to the crown care ritual kits page
+*/
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(135deg, var(--deep-brown) 0%, var(--soft-brown) 50%, var(--gold) 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--warm-white);
+  opacity: 0.95;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Ritual Kits */
+.rituals-page {
+  padding: 6rem 0;
+  background: var(--warm-white);
+  text-align: center;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  margin: -2rem 0 3rem 0;
+  font-weight: 300;
+}
+
+.rituals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.kit-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.kit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.2);
+  border-color: var(--gold-light);
+}
+
+.kit-image {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kit-card:hover .kit-image {
+  transform: scale(1.05);
+}
+
+.kit-info {
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+
+.kit-info h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--deep-brown);
+}
+
+.kit-description {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.kit-info .price {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.rating-score {
+  color: var(--text-medium);
+  margin-left: 0.75rem;
+  font-weight: 300;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10001;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 3rem;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--text-medium);
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--deep-brown);
+}
+
+.kit-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kit-modal-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.kit-modal-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: var(--deep-brown);
+  margin: 0;
+  text-align: center;
+}
+
+.kit-modal-price {
+  font-size: 2rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.kit-modal-description {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  text-align: center;
+  font-style: italic;
+}
+
+.kit-section {
+  background: var(--cream);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.kit-section h3 {
+  color: var(--deep-brown);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.kit-includes,
+.kit-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kit-includes li,
+.kit-steps li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kit-includes li:last-child,
+.kit-steps li:last-child {
+  border-bottom: none;
+}
+
+.kit-steps {
+  counter-reset: step-counter;
+}
+
+.kit-steps li {
+  counter-increment: step-counter;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.kit-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  background: var(--gold);
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.kit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-large {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .rituals-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modal-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .kit-actions {
+    flex-direction: column;
+  }
+
+  .btn-large {
+    width: 100%;
+  }
+}
